@@ -1,0 +1,36 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St.Clair West Subway Station",
+                "address": "370 St Clair Ave W, TORONTO ONTARIO M5P 1N4",
+                "collectionName": "Subway Stations closest to Festivals"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.41564562593271,
+                    43.685000290621105
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Toronto Union Station",
+                "address": "55 Front St W, Toronto On M5J 1E6",
+                "collectionName": "Subway Stations closest to Festivals"
+            
+        },
+        "geometry": {
+            "coordinates": [
+                -79.38033259870781,
+                43.64448581180332
+            ],
+            "type": "Point"
+        }
+    }
+]
+}

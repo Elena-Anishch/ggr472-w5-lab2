@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St.George Campus",
+                "address": "27 King's College Circle,Toronto, Ontario M5S 1A1",
+                "collectionName": "UofT3campuses"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.39608027116434,
+                    43.66100433149802
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mississauga Campus",
+                "address": "3359 Mississauga Road, Mississauga, Ontario L5L 1C6 ",
+                "collectionName": "UofT3campuses"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.66336899999986,
+                    43.54814532864657
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Scarborough Campus",
+                "address": "1265 Military Trail, Toronto, Ontario M1C 1A4 Canada",
+                "collectionName": "UofT3campuses"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.18628027116512,
+                    43.78397620302135
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}

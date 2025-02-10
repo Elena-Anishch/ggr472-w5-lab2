@@ -1,0 +1,35 @@
+
+
+.heading {
+    background-color: #0d6efd;
+    /* set the background color for heading class */
+    color: white;
+    /* set the text color for heading class */
+    font-family: sans-serif;
+    /* set the font heading class */
+}
+
+.container_text-center_button {
+    background-color: #f0f0f0;
+    /* set the background color for buttons container */
+
+}
+
+
+.paragraph-style {
+    background-color: #f7f7f7;
+    /* set the background color for the paragraph */
+    color: #444444;
+    /* set the font color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        /* set the font for the paragraph */
+}
+.map-container {
+    width: 100%;          /* Set width to 100% of its container */
+    height: 400px;        /* Set a fixed height for the map (you can adjust this) */
+    margin-top: 20px;     /* Add margin above the map to prevent overlap */
+    margin-bottom: 20px;  /* Optional: Adds space below the map */
+    display: block;       /* Make sure it's a block element */
+    box-sizing: border-box;
+    
+}

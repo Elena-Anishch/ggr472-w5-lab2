@@ -1,0 +1,195 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Toronto Dance Salsa",
+                "address": "Second Floor, Empress Walk, 5095 Yonge St, North York, ON M2N 6Z4",
+                "collectionName": "Dance Studios"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.41227843491079,
+                    43.76828866218551
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Steps Dance Studio",
+                "address": "819 Yonge Street, 3rd floor,Toronto, ON  M4W 2G94",
+                "collectionName": "Dance Studios"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.38745296516402,
+                    43.67266063519875
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "AfroLatino Dance Company",
+                "address": "3347 Dundas St W, Toronto, ON M6P 2A6",
+                "collectionName": "Dance Studios"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.4817034022257,
+                    43.6654118684975
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "iFreeStyle Company at Dance Annex Studio",
+                "address": "693 Bloor St W.,Toronto, ON M6G 1L5, Toronto, Ontario",
+                "collectionName": "Dance Studios"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.41735140349263,
+                    43.663546935219756
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lula Lounge",
+                "address": "1585 Dundas St W, Toronto, Ontario, M6K 1T9",
+                "collectionName": "Dance Lounges"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.4345753771591,
+                    43.64959781369626
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "El Rancho Lounge",
+                "address": "430 College St, Toronto, Ontario, M5T 1T3",
+                "collectionName": "Dance Lounges"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.40725449880685,
+                    43.65688698482967
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Salsa on St.Clair",
+                "address": "St.clair Avenue W, Toronto On M6C 1B2",
+                "collectionName": "Dance Festivals"
+            },
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            -79.43264941857792,
+                            43.68073695463414
+                        ],
+                        [
+                            -79.43232215615507,
+                            43.67987544787434
+                        ],
+                        [
+                            -79.42543655477455,
+                            43.681267106492044
+                        ],
+                        [
+                            -79.425816179185,
+                            43.682156993721634
+                        ],
+                        [
+                            -79.43264941857792,
+                            43.68073695463414
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Latin Sparks Festival",
+                "address": "955 Lake Shore Blvd W, Toronto, ON M6K 3B9",
+                "collectionName": "Dance Festivals"
+            },
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            -79.4184050405506,
+                            43.62706661732287
+                        ],
+                        [
+                            -79.4203181988231,
+                            43.62773832608579
+                        ],
+                        [
+                            -79.42061057516996,
+                            43.62734266292853
+                        ],
+                        [
+                            -79.41876097697333,
+                            43.626684752144996
+                        ],
+                        [
+                            -79.4184050405506,
+                            43.62706661732287
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Century Wide Dance Shoes",
+                "address": "8 Glen Watford Dr, Unit 13, Scarborough, Ontario, M1S 2C1",
+                "collectionName": "Dance Stores"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.276662030863,
+                    43.786591818761764
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Natural Spin Dance Store",
+                "address": "20 Wertheim Crt, Unit 15, Richmond Hill, Ontario, L4B 3A8",
+                "collectionName": "Dance Stores"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.38490450700566,
+                    43.846324485311044
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
