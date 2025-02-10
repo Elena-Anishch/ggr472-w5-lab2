@@ -4,7 +4,7 @@ const btn1 = document.getElementById("my-button1");
 btn1.addEventListener("click", () => {
     // adding an evenlistener
     // after clicking the button geojson file is to open in a new window
-    window.open('mappeddata.geojson', '_blank')
+    window.open('storymapdata.geojson', '_blank')
 });
 const btn2 = document.getElementById("my-button2");
 // getting the button through the id named "my-button2"
@@ -27,7 +27,7 @@ const map = new mapboxgl.Map({
     container: 'my-map', // map container ID 
     style: 'mapbox://styles/elena-anishch/cm6y5btsc00nn01sb2wtw5nex', // style URL 
     center: [-79.39, 43.66], // starting position [lng, lat] 
-    zoom: 8, // starting zoom level 
+    zoom: 4, // starting zoom level 
 });
 
 map.on('load', () => {
@@ -99,23 +99,23 @@ map.on('load', () => {
     });
 
     // Add a data source from a GeoJSON file 
-    map.addSource('buildings-data', {
+    map.addSource('subways-data', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/Elena-Anishch/ggr472-exw5/refs/heads/main/wk5-data/buildings.geojson' // Your URL to your buildings.geojson file 
+        data: 'https://raw.githubusercontent.com/Elena-Anishch/ggr472-w5-lab2/refs/heads/main/lab2data/subwaystationsclosest2fesitval.geojson' // Your URL to your subways-data.geojson file 
     });
     map.addLayer({
-        'id': 'buildings-point',
+        'id': 'subways-data',
         'type': 'circle',
-        'source': 'buildings-data',
-        'paint': {
-            'circle-radius': 5,
-            'circle-color': '#007cbf'
-        }
+        'source': 'subways-data',
+       'paint': {
+           'circle-radius': 5,
+            'circle-color': '#000000'
+       }
     });
     // Add a data source from a Mapbox tileset 
-    map.addSource('toronto-census-tracts', { // Create your own source ID 
+    map.addSource('toronto-census-tracts', { // Source ID for toronto census tracks 
         'type': 'vector',
-        'url': 'mapbox://elena-anishch.7ze1m1pp' // Update to your mapbox tileset ID 
+        'url': 'mapbox://elena-anishch.7ze1m1pp' // Mapbox tileset ID 
     });
 
     map.addLayer({
@@ -124,12 +124,12 @@ map.on('load', () => {
         'source': 'toronto-census-tracts', // Must match source ID from addSource Method 
         'paint': {
             'fill-color': '#000000', // Test alternative colours and style properties 
-            'fill-opacity': 0.4,
+            'fill-opacity': 0.2,
             'fill-outline-color': 'black'
         },
         'source-layer': 'torontoct-53j7j1' // Tileset NAME (diff to ID), get this from mapbox tileset page
     },
-        'buildings-point' // Drawing order - places layer below points 
+        'subways-data' // Drawing order - places layer below points 
         // Here the addlayer method takes 2 arguments (the layer as an object and a string for another layer's name). If the other layer already exists, the new layer will be drawn before that one 
     );
 

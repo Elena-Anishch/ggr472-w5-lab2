@@ -25,10 +25,12 @@
         /* set the font for the paragraph */
 }
 .map-container {
-    width: 100%;          /* Set width to 100% of its container */
+    width: 80%;          /* Set width to 100% of its container */
     height: 400px;        /* Set a fixed height for the map (you can adjust this) */
-    margin-top: 20px;     /* Add margin above the map to prevent overlap */
-    margin-bottom: 20px;  /* Optional: Adds space below the map */
+    margin-left: 10%;      /* Add margin on the left side */
+    margin-right: 10%;     /* Add margin on the right side */
+    margin-top: 20px;      /* Add margin above the map */
+    margin-bottom: 20px; 
     display: block;       /* Make sure it's a block element */
     box-sizing: border-box;
     
