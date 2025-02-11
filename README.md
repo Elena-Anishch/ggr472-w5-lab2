@@ -9,7 +9,7 @@ This is created by a beginner developer, therefore there may be mistakes and are
 
 ## Warning
 
-The content and coe here should be used for **learning and educational purposes only**. It is **not production-ready**.
+The content and code here should be used for **learning and educational purposes only**. It is **not production-ready**.
 
 ## Website Description
 - Created as part of course work
