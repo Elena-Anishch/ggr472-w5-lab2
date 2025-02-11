@@ -1,37 +1,79 @@
-
-
 .heading {
     background-color: #0d6efd;
-    /* set the background color for heading class */
+    /* setting the background color for heading class */
     color: white;
-    /* set the text color for heading class */
+    /* setting the text color for heading class */
     font-family: sans-serif;
-    /* set the font heading class */
+    /* setthing the font heading class */
 }
 
 .container_text-center_button {
     background-color: #f0f0f0;
-    /* set the background color for buttons container */
+    /* setting the background color for buttons container */
 
 }
+
 
 
 .paragraph-style {
     background-color: #f7f7f7;
-    /* set the background color for the paragraph */
+    /* setting the background color for the paragraph */
     color: #444444;
-    /* set the font color */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        /* set the font for the paragraph */
+    /* setting the font color */
+    font-family: 'Segoe UI', sans-serif
+        /* setting the font for the paragraph */
 }
+
 .map-container {
-    width: 80%;          /* Set width to 100% of its container */
-    height: 400px;        /* Set a fixed height for the map (you can adjust this) */
-    margin-left: 10%;      /* Add margin on the left side */
-    margin-right: 10%;     /* Add margin on the right side */
-    margin-top: 20px;      /* Add margin above the map */
-    margin-bottom: 20px; 
-    display: block;       /* Make sure it's a block element */
+    width: 80%;
+    /* Setting width to 100% of its container */
+    height: 400px;
+    /* Setting a fixed height for the map (you can adjust this) */
+    margin-left: 10%;
+    /* Adding margin on the left side */
+    margin-right: 10%;
+    /* Adding margin on the right side */
+    margin-top: 20px;
+    /* Adding margin above the map */
+    margin-bottom: 20px;
+    display: block;
+    /* Make sure it's a block element */
     box-sizing: border-box;
-    
+    /*padding and border are included in the element's total width and geight */
+    border: 6px solid #333;
+    /*adding a solid border wtih a color  */
+    display: block;
+    /* making it a block element */
+
+}
+
+.heading2 {
+    background-color: #2e426173;
+    /* seting the background color for heading class */
+    color: black;
+    /* setting the text color for heading class */
+    font-family: sans-serif;
+    /* setting the font heading class */
+    font-size: 24px;
+
+}
+
+.table {
+    margin: 20 px;
+    /* setting a margin aroun the table*/
+    width: 80%;
+    /* setting the width of the tale*/
+
+}
+
+.red-text {
+    color: red;
+    font-weight: bold;
+    /* Making the text bold */
+}
+
+.black-text {
+    color: black;
+    font-weight: bold;
+    /* Making the text bold */
 }

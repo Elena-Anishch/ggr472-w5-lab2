@@ -29,28 +29,37 @@ const map = new mapboxgl.Map({
     center: [-79.39, 43.66], // starting position [lng, lat] 
     zoom: 4, // starting zoom level 
 });
+// Create a fullscreen control for the map
+var fullscreenControl = new mapboxgl.FullscreenControl({
+    container: document.querySelector('my-map') // Optional: Specifies the container 'my-map'to enable fullscreen for the specific container
+});
+// 'my-map' is the container ID where the fullscreen control will be applied. 
+// If omitted, the fullscreen control would apply to the entire page.
 
+// Add the fullscreen control to the map
+map.addControl(fullscreenControl); // Adds the fullscreen control button to the map interface.
+
+// Event listener that triggers when the map has fully loaded
 map.on('load', () => {
-
-    // Add a data source containing GeoJSON data 
+    // Add a data source containing GeoJSON data of UofT Campuses
     map.addSource('uoft3campuses-data', {
-        type: 'geojson',
+        type: 'geojson', // Specifies that the data source type is GeoJSON
         data: {
-            "type": "FeatureCollection",
-            "features": [
+            "type": "FeatureCollection", // Defines the data type as a collection of geographic features
+            "features": [ // Array of geographic features (locations)
                 {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "St.George Campus",
+                    "type": "Feature",// Defines this as a geographic feature
+                    "properties": { // Specifies metadata about the feature (such as name, address, etc.)
+                        "name": "St.George Campus", // Name of the campus
                         "address": "27 King's College Circle,Toronto, Ontario M5S 1A1",
-                        "collectionName": "UofT3campuses"
+                        "collectionName": "UofT3campuses" // Name of the collection this feature belongs to
                     },
-                    "geometry": {
-                        "coordinates": [
-                            -79.39608027116434,
-                            43.66100433149802
-                        ],
-                        "type": "Point"
+                    "geometry": { // Defines the geometry (location) of the feature
+                        "coordinates": [ // Longitude and latitude of the location
+                            -79.39608027116434, // Longitude of St. George campus
+                            43.66100433149802], // Latitude of St. George campus
+
+                        "type": "Point" // Specifies that the geometry is a point (location)
                     }
                 },
                 {
@@ -58,7 +67,7 @@ map.on('load', () => {
                     "properties": {
                         "name": "Mississauga Campus",
                         "address": "3359 Mississauga Road, Mississauga, Ontario L5L 1C6",
-                        "collectionName": "UofT3campuses"
+                        "collectionName": "UofT3campuses" // Name of the collection this feature belongs to
                     },
                     "geometry": {
                         "coordinates": [
@@ -73,7 +82,7 @@ map.on('load', () => {
                     "properties": {
                         "name": "Scarborough Campus",
                         "address": "1265 Military Trail, Toronto, Ontario M1C 1A4 Canada",
-                        "collectionName": "UofT3campuses"
+                        "collectionName": "UofT3campuses" // Name of the collection this feature belongs to
                     },
                     "geometry": {
                         "coordinates": [
@@ -86,53 +95,53 @@ map.on('load', () => {
                 }
             ]
         }
-    }); // <-- This closing parenthesis was missing for map.addSource method.
-    map.addLayer({
-        'id': 'uoft-pnt',
-        'type': 'circle',
-        'source': 'uoft3campuses-data',
-        'paint': {
-            'circle-radius': 6,
-            'circle-color': '#B42222'
-        }
-
     });
 
-    // Add a data source from a GeoJSON file 
-    map.addSource('subways-data', {
-        type: 'geojson',
+    // Add a circle layer for UofT campuses with a red color
+    map.addLayer({
+        'id': 'uoft-pnt', // ID for the uoft campuses point layer
+        'type': 'circle', // Defines the type of the layer as a cirle used for point data
+        'source': 'uoft3campuses-data', // Specifies the source of the data for this layer, referencing a previously added source
+        'paint': {  // Defines the style properties for the layer
+            'circle-radius': 6, // Sets the radius of the circles (markers) to 6 pixels
+            'circle-color': '#B42222'  // Sets the color of the circles to a shade of red (#B42222)
+        }
+    });
+
+    // Add a data source for subway stations from a GeoJSON URL from the repository
+    map.addSource('subways-data', { /// Adding a new data source to the map with ID 'subways-data'
+        type: 'geojson', // Specifies the data source is GeoJson
         data: 'https://raw.githubusercontent.com/Elena-Anishch/ggr472-w5-lab2/refs/heads/main/lab2data/subwaystationsclosest2fesitval.geojson' // Your URL to your subways-data.geojson file 
     });
+
+    // Add a circle layer for subway stations with a black color
     map.addLayer({
-        'id': 'subways-data',
-        'type': 'circle',
-        'source': 'subways-data',
-       'paint': {
-           'circle-radius': 5,
-            'circle-color': '#000000'
-       }
+        'id': 'subways-data', // ID for subways stations layer
+        'type': 'circle', // Defines the type of the layer as a cirle used for point data
+        'source': 'subways-data', // Specifies the source of the data for this layer, referencing a previously added source
+        'paint': { // Defines the style properties for the layer
+            'circle-radius': 5, //Sets the radius of the circles (markers) to 5 pixels
+            'circle-color': '#000000' // Sets the color of the subway station markers to black
+        }
     });
-    // Add a data source from a Mapbox tileset 
+    // Add a data source for Toronto census tracts from a Mapbox tileset
     map.addSource('toronto-census-tracts', { // Source ID for toronto census tracks 
-        'type': 'vector',
+        'type': 'vector', // data is vector based
         'url': 'mapbox://elena-anishch.7ze1m1pp' // Mapbox tileset ID 
     });
 
+    // Add a fill layer for Toronto census tracts with a semi-transparent black color
     map.addLayer({
-        'id': 'census-tracts-layer', // Create your own layer ID 
-        'type': 'fill', // Note this is different to point data 
-        'source': 'toronto-census-tracts', // Must match source ID from addSource Method 
-        'paint': {
-            'fill-color': '#000000', // Test alternative colours and style properties 
-            'fill-opacity': 0.2,
-            'fill-outline-color': 'black'
+        'id': 'census-tracts-layer', // Creating a census tracts layer ID 
+        'type': 'fill', // Different to point data 
+        'source': 'toronto-census-tracts', // Matching  source ID from addSource Method 
+        'paint': { // Defines the style properties for the layer
+            'fill-color': '#000000', // setting the fill color to black
+            'fill-opacity': 0.2, // setting the opacity of the fill to 20%
+            'fill-outline-color': 'black' // setting the outline color of the fill to black 
         },
-        'source-layer': 'torontoct-53j7j1' // Tileset NAME (diff to ID), get this from mapbox tileset page
+        'source-layer': 'torontoct-53j7j1' // Tileset NAME obtianed from mapbox tileset page
     },
-        'subways-data' // Drawing order - places layer below points 
-        // Here the addlayer method takes 2 arguments (the layer as an object and a string for another layer's name). If the other layer already exists, the new layer will be drawn before that one 
-    );
-
-
+        'subways-data'); // Ensuring the census tracts layer is below the subway points
 
 });
